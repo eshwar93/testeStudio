@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="JMSIn1" x="341" y="97"/>
+    <service-instance name="JMSOut1" x="341" y="180"/>
+    <service-instance name="Display1" x="655" y="105"/>
+    <service-instance name="Feeder1" x="132" y="85"/>
+    <service-instance name="JMSOut2" x="358" y="316"/>
+    <service-instance name="JMSIn2" x="375" y="257"/>
+    <service-instance name="Feeder2" x="181" y="260"/>
+    <service-instance name="Display2" x="585" y="284"/>
+    <service-instance name="Feeder3" x="209" y="408"/>
+    <service-instance name="JMSOut3" x="386" y="464"/>
+    <service-instance name="Display3" x="613" y="432"/>
+    <service-instance name="JMSIn3" x="398" y="387"/>
+  </subflow>
+  <shortcut-routes/>
+</layout>

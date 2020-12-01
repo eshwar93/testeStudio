@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.8.0_121" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.edbc.as4connector.model.AS4ConnectorPM"> 
+  <void property="attachmentsDir"> 
+   <string>/home/sriram/Fiorano_sources/Fio_Trunk/Sources/adapters/edbc/components/AS4Connector/src/com/fiorano/edbc/as4connector/cps</string> 
+  </void> 
+  <void property="attachmentsFile"> 
+   <string>dandelion.jpg</string> 
+  </void> 
+  <void property="configuredVersion"> 
+   <int>1100</int> 
+  </void> 
+  <void property="connectionConfig"> 
+   <void property="sendURI"> 
+    <string>http://192.168.2.181:1880/bcwsgateway/services/sample</string> 
+   </void> 
+  </void> 
+  <void property="errorHandlingConfiguration"> 
+   <void property="errorActionsMap"> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>3</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>2</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>1</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="id"> 
+        <int>2</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>0</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>6</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="mode"> 
+   <string>RECEIVE</string> 
+  </void> 
+  <void property="parameterConfig"> 
+   <void property="modeParameters"> 
+    <void method="put"> 
+     <string>Agreement-Reference</string> 
+     <string>http://agreements.holodeckb2b.org/examples/agreement0</string> 
+    </void> 
+    <void method="put"> 
+     <string>Service</string> 
+     <string>Examples</string> 
+    </void> 
+    <void method="put"> 
+     <string>Service-Type</string> 
+     <string>org:holodeckb2b:services</string> 
+    </void> 
+    <void method="put"> 
+     <string>Action</string> 
+     <string>StoreMessage</string> 
+    </void> 
+    <void method="put"> 
+     <string>Conversation-ID</string> 
+     <string>org:holodeckb2b:test:conversation</string> 
+    </void> 
+    <void method="put"> 
+     <string>Initiator-PartyID</string> 
+     <string>org:holodeckb2b:example:company:A</string> 
+    </void> 
+    <void method="put"> 
+     <string>Initiator-Role</string> 
+     <string>Sender</string> 
+    </void> 
+    <void method="put"> 
+     <string>Responder-PartyID</string> 
+     <string>org:holodeckb2b:example:company:B</string> 
+    </void> 
+    <void method="put"> 
+     <string>Responder-Role</string> 
+     <string>Receiver</string> 
+    </void> 
+    <void method="put"> 
+     <string>Part-Properties</string> 
+     <string>text/xml</string> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="readfromfile"> 
+   <boolean>true</boolean> 
+  </void> 
+  <void property="reqPWCallback"> 
+   <string>PWCallback</string> 
+  </void> 
+  <void property="servicename"> 
+   <string>sample</string> 
+  </void> 
+  <void property="targetDir"> 
+   <string>/root/Desktop/as4/test</string> 
+  </void> 
+ </object> 
+</java> 

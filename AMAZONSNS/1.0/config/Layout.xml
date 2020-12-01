@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="Feeder1" x="155" y="162"/>
+    <service-instance name="AmazonSNS1" x="306" y="167"/>
+    <service-instance name="Display1" x="566" y="168"/>
+    <service-instance name="AmazonSNS2" x="324" y="258"/>
+    <service-instance name="Feeder2" x="155" y="268"/>
+  </subflow>
+  <shortcut-routes/>
+</layout>

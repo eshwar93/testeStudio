@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:fns="http://www.fiorano.com/fesb/activity/JMSIn1/jmsIn/In" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.fiorano.com/fesb/activity/JMSIn1/jmsIn/In">
+   <xsd:complexType name="JMSMessageType">
+      <xsd:sequence>
+         <xsd:element minOccurs="0" maxOccurs="unbounded" name="JMSHeader" type="fns:JMSHeaderType"/>
+         <xsd:element minOccurs="0" maxOccurs="unbounded" name="Properties" type="fns:PropertyType"/>
+         <xsd:element name="Body" type="xsd:string"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="Message" type="fns:JMSMessageType"/>
+   <xsd:complexType name="JMSHeaderType">
+      <xsd:sequence>
+         <xsd:element minOccurs="0" maxOccurs="unbounded" name="JMSCorrelationID" type="xsd:string"/>
+         <xsd:element minOccurs="0" maxOccurs="unbounded" name="JMSDestination" type="xsd:string"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="PropertyType">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="fns:Property"/>
+      </xsd:choice>
+   </xsd:complexType>
+   <xsd:complexType name="PropertyBase">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:string">
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="type" type="xsd:string" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:element name="Property" type="fns:PropertyBase"/>
+</xsd:schema>

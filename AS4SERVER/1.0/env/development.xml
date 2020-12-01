@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:target="http://fiorano.com/environment/1.0" xsi:schemaLocation="http://fiorano.com/environment/1.0 env.xsd">
+  <target:instance name="AS4Connector2">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="AS4AdapterConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;namedConfiguration CLASS_NAME=&quot;com.fiorano.edbc.as4connector.model.AS4ConnectionConfiguration&quot;>
+    &lt;maxIdleTimeout>300000&lt;/maxIdleTimeout>
+    &lt;sendURI>http://192.168.2.181:1880/bcwsgateway/services/sample&lt;/sendURI>
+&lt;/namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="FESConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.esb.common.connections.configuration.FESConnectionConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.esb.common.connections.configuration&quot;>
+    &lt;ns1:passwordFromVault>false&lt;/ns1:passwordFromVault>
+    &lt;ns1:customPasswordEncryption>false&lt;/ns1:customPasswordEncryption>
+    &lt;ns1:isUseConnectionDetailsFromFPS>false&lt;/ns1:isUseConnectionDetailsFromFPS>
+    &lt;ns1:url>tsp_tcp://localhost:1947&lt;/ns1:url>
+    &lt;ns1:backupUrl>tsp_tcp://localhost:1948&lt;/ns1:backupUrl>
+    &lt;ns1:username>admin&lt;/ns1:username>
+    &lt;ns1:password>passwd&lt;/ns1:password>
+    &lt;ns1:fspCallTimeout>180000&lt;/ns1:fspCallTimeout>
+&lt;/ns1:namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+</target:target>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:fns="http://www.fiorano.com/fesb/activity/JMSOut1/jmsOut/Out" xmlns:fns1="http://www.fiorano.com/fesb/activity/Text2XML1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.fiorano.com/fesb/activity/JMSOut1/jmsOut/Out">
+   <xsd:import namespace="http://www.fiorano.com/fesb/activity/Text2XML1"/>
+   <xsd:complexType name="BodyType">
+      <xsd:sequence>
+         <xsd:element ref="fns1:Employee_Schema"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="PropertyType">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="fns:Property"/>
+      </xsd:choice>
+   </xsd:complexType>
+   <xsd:complexType name="PropertyBase">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:string">
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="type" type="xsd:string" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:element name="Property" type="fns:PropertyBase"/>
+   <xsd:complexType name="JMSMessageType">
+      <xsd:sequence>
+         <xsd:element name="JMSHeader" type="fns:JMSHeaderType"/>
+         <xsd:element name="Properties" type="fns:PropertyType"/>
+         <xsd:element name="Body" type="fns:BodyType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="Message" type="fns:JMSMessageType"/>
+   <xsd:complexType name="JMSHeaderType">
+      <xsd:sequence>
+         <xsd:element minOccurs="0" maxOccurs="unbounded" name="JMSCorrelationID" type="xsd:string"/>
+         <xsd:element name="JMSDeliveryMode" type="xsd:string"/>
+         <xsd:element name="JMSDestination" type="xsd:string"/>
+         <xsd:element name="JMSExpiration" type="xsd:string"/>
+         <xsd:element name="JMSMessageID" type="xsd:string"/>
+         <xsd:element name="JMSPriorityTag" type="xsd:string"/>
+         <xsd:element name="JMSRedelivered" type="xsd:string"/>
+         <xsd:element name="JMSReplyTo" type="xsd:string"/>
+         <xsd:element name="JMSTimeStamp" type="xsd:string"/>
+         <xsd:element name="JMSTypeTag" type="xsd:string"/>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>
